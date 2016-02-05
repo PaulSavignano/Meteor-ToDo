@@ -2,6 +2,17 @@
   <title>Todo List</title>
 </head>
 
+
 <body>
-  {{> main}}
+  <div class="container">
+    <header>
+      <h1>Todo List</h1>
+      <label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}">
+        Hide Completed Tasks
+      </label>
+      {{> form}}
+    </header>
+    {{> task}}
+  </div>
 </body>
