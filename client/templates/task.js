@@ -16,11 +16,9 @@ Template.task.helpers({
 
 Template.task.events({
   'click .toggle-checked': function() {
-    Tasks.update(this._id, {
-      $set: {checked: !this.checked}
-    });
+    Meteor.call('setChecked', this._id, !this.checked);
   },
   'click .delete': function() {
-    Tasks.remove(this._id);
+    Meteor.call('deleteTask', this._id);
   }
 });

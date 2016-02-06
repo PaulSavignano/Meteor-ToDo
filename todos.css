@@ -33,6 +33,7 @@ header {
 
 #login-buttons {
   display: block;
+  float: right;
 }
 
 h1 {
